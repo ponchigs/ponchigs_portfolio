@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Кириллица → латиница</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body>
+  
+<header class="site-header">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo.png" alt="Логотип" class="logo" width="160">
+  </a>
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html">Главная</a>
+    <a href="about.html">Обо мне</a>
+    <a href="portfolio.html">Работы</a>
+    <a href="contact.html">Контакты</a>
+    <a href="feedback.html">Отзыв</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">Мой GitHub</a>
+  </nav>
+</header>
+
+  <main>
+    <h1>Преобразование</h1>
+    <p class="to-translit">Иванова</p>
+    <p class="to-translit">Алина</p>
+    <p class="to-translit">2005</p>
+    <button id="go">Преобразовать</button>
+  </main>
+  
+<footer class="site-footer">
+  <p>© 2025 Ваше имя. Учебный проект.</p>
+</footer>
+
+  <script>
+    const map = { 'А':'A','Б':'B','В':'V','Г':'G','Д':'D','Е':'E','Ё':'YO','Ж':'ZH','З':'Z','И':'I','Й':'Y','К':'K','Л':'L','М':'M','Н':'N','О':'O','П':'P','Р':'R','С':'S','Т':'T','У':'U','Ф':'F','Х':'KH','Ц':'TS','Ч':'CH','Ш':'SH','Щ':'SHCH','Ъ':'\'', 'Ы':'Y','Ь':'\'','Э':'E','Ю':'YU','Я':'YA', 'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'yo','ж':'zh','з':'z','и':'i','й':'y','к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f','х':'kh','ц':'ts','ч':'ch','ш':'sh','щ':'shch','ъ':'\'','ы':'y','ь':'\'','э':'e','ю':'yu','я':'ya' };
+    const translit = s => s.split('').map(c=>map[c]||c).join('');
+    document.getElementById('go').addEventListener('click',()=>{
+      document.querySelectorAll('.to-translit').forEach(el=>{
+        el.textContent = translit(el.textContent);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Решение алгоритмической задачи</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body>
+  
+<header class="site-header">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo.png" alt="Логотип" class="logo" width="160">
+  </a>
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html">Главная</a>
+    <a href="about.html">Обо мне</a>
+    <a href="portfolio.html">Работы</a>
+    <a href="contact.html">Контакты</a>
+    <a href="feedback.html">Отзыв</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">Мой GitHub</a>
+  </nav>
+</header>
+
+  <main>
+    <h1>Калькулятор возраста</h1>
+    <label>Год рождения: <input type="number" id="yob" value="2005"></label>
+    <button id="calc">Рассчитать</button>
+    <pre id="res">—</pre>
+  </main>
+  
+<footer class="site-footer">
+  <p>© 2025 Ваше имя. Учебный проект.</p>
+</footer>
+
+  <script>
+    document.getElementById('calc').addEventListener('click',()=>{
+      const y = +document.getElementById('yob').value;
+      const age = new Date().getFullYear() - y;
+      const status = age >= 18 ? 'совершеннолетний(ая)' : 'несовершеннолетний(ая)';
+      const out = { "входные_данные": y, "возраст": age, "статус": status };
+      document.getElementById('res').textContent = JSON.stringify(out, null, 2);
+      localStorage.setItem('algo_input', String(y));
+      localStorage.setItem('algo_result', JSON.stringify(out));
+    });
+  </script>
+</body>
+</html>

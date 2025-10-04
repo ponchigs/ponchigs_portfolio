@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Отзыв — Портфолио</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body>
+  
+<header class="site-header">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo.png" alt="Логотип" class="logo" width="160">
+  </a>
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html">Главная</a>
+    <a href="about.html">Обо мне</a>
+    <a href="portfolio.html">Работы</a>
+    <a href="contact.html">Контакты</a>
+    <a href="feedback.html">Отзыв</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">Мой GitHub</a>
+  </nav>
+</header>
+
+  <main>
+    <h1>Оставить отзыв</h1>
+    <form action="https://httpbin.org/post" method="post">
+      <label>Тема отзыва: <input type="text" name="topic" value="Мой сайт"></label><br>
+      <label>Оценка (1–10): <input type="number" name="rating" min="1" max="10" value="10"></label><br>
+
+      <p>Ваше впечатление:</p>
+      <label><input type="radio" name="mood" value="like" checked> Нравится</label>
+      <label><input type="radio" name="mood" value="ok"> Нравится с правками</label>
+      <label><input type="radio" name="mood" value="no"> Не нравится</label><br>
+
+      <p>Опции:</p>
+      <label><input type="checkbox" name="publish" value="yes" checked> Разрешаю публиковать отзыв</label>
+      <label><input type="checkbox" name="news" value="yes"> Получать новости</label><br>
+
+      <label>Дата публикации: <input type="date" name="pub_date"></label><br>
+      <label>Код подтверждения: <input type="password" name="code" value="secret"></label><br>
+      <input type="hidden" name="form_id" value="FEEDBACK_01">
+
+      <button type="submit">Отправить отзыв</button>
+    </form>
+    <script>
+      const pd=document.querySelector('input[name="pub_date"]');
+      if(pd) pd.value = new Date().toISOString().slice(0,10);
+    </script>
+  </main>
+  
+<footer class="site-footer">
+  <p>© 2025 Ваше имя. Учебный проект.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Отправка алгоритма</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body>
+  
+<header class="site-header">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo.png" alt="Логотип" class="logo" width="160">
+  </a>
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html">Главная</a>
+    <a href="about.html">Обо мне</a>
+    <a href="portfolio.html">Работы</a>
+    <a href="contact.html">Контакты</a>
+    <a href="feedback.html">Отзыв</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">Мой GitHub</a>
+  </nav>
+</header>
+
+  <main>
+    <h1>Отправка результата алгоритма</h1>
+    <form action="https://httpbin.org/post" method="post" id="algoForm">
+      <label>Условие (кратко):<br>
+        <textarea name="task_condition" rows="3">Рассчитать возраст по году рождения и определить статус.</textarea>
+      </label><br>
+      <label>Входные данные: <input type="text" name="input_data" id="input_data" value=""></label><br>
+      <label>Результат: <input type="text" name="result_value" id="result_value" value=""></label><br>
+      <input type="hidden" name="student_id" value="STUDENT_XXX">
+      <button type="submit">Отправить</button>
+    </form>
+    <p><small>Подсказка: сначала заполните данные на странице «Решение алгоритмической задачи», затем вернитесь сюда — поля заполнятся автоматически.</small></p>
+  </main>
+  
+<footer class="site-footer">
+  <p>© 2025 Ваше имя. Учебный проект.</p>
+</footer>
+
+  <script>
+    const input = localStorage.getItem('algo_input') || '';
+    const result = localStorage.getItem('algo_result') || '';
+    if(input) document.getElementById('input_data').value = input;
+    if(result) document.getElementById('result_value').value = result;
+  </script>
+</body>
+</html>

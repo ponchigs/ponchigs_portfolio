@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Обо мне — Портфолио</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body>
+  
+<header class="site-header">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo.png" alt="Логотип" class="logo" width="160">
+  </a>
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html">Главная</a>
+    <a href="about.html">Обо мне</a>
+    <a href="portfolio.html">Работы</a>
+    <a href="contact.html">Контакты</a>
+    <a href="feedback.html">Отзыв</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">Мой GitHub</a>
+  </nav>
+</header>
+
+  <main>
+    <p class="anchor-nav"><a href="#bio">Раздел 1</a> · <a href="#skills">Раздел 2</a> · <a href="#top">К началу</a></p>
+    <h1 id="top">Обо мне</h1>
+
+    <section id="bio">
+      <h2>Коротко</h2>
+      <figure>
+        <img src="images/me.jpg" alt="Моё фото" width="320">
+        <figcaption>Подпись к фото</figcaption>
+      </figure>
+      <p>Пара абзацев о себе…</p>
+    </section>
+
+    <section id="skills">
+      <h2>Навыки и цели</h2>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>Git/GitHub</li>
+      </ul>
+      <ol>
+        <li>Сдать контрольную</li>
+        <li>Сделать pet‑project</li>
+      </ol>
+      <ul>
+        <li>Образование
+          <ul>
+            <li>Курс А</li>
+            <li>Курс Б</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Таблица навыков (фон у всей таблицы)</h3>
+      <table class="table-bg">
+        <tr>
+          <th>Навык</th><th>Уровень</th><th>Материал</th><th>Значок</th>
+        </tr>
+        <tr>
+          <td>HTML</td><td>4/5</td><td><a href="https://developer.mozilla.org/">MDN</a></td>
+          <td><img src="images/cell-img.jpg" alt="badge" width="80"></td>
+        </tr>
+        <tr>
+          <td>CSS</td><td>4/5</td><td><a href="https://flexboxfroggy.com/" target="_blank" rel="noopener">Практика</a></td>
+          <td>—</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+  
+<footer class="site-footer">
+  <p>© 2025 Ваше имя. Учебный проект.</p>
+</footer>
+
+</body>
+</html>
