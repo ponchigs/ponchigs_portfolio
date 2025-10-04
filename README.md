@@ -25,7 +25,7 @@
 
 ## 🧭 Как открыть сайт
 1. Перейти по ссылке GitHub Pages:  
-   👉 https://ponchigs.github.io/polina-portfolio/  
+   👉 [https://ponchigs.github.io/polina-portfolio/](https://ponchigs.github.io/ponchigs_portfolio/)  
 2. Или открыть `index.html` локально на компьютере.
 
 ---
