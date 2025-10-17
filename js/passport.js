@@ -17,7 +17,7 @@ let button = document.querySelector('.button');
         }
 
         function convertToLatin() {
-            const elements = document.querySelectorAll('.hfamilia, .hname, .hfname, .hborn, .hpborn1, hpborn2');
+            const elements = document.querySelectorAll('.hfamilia, .hname, .hfname, .hborn, .hpborn1, .hpborn2');
             
             elements.forEach(element => {
                 element.innerText = transliterate(element.innerText);
