@@ -23,12 +23,55 @@
   </nav>
 </header>
 
+<head>
+      <meta charset = "utf8">
+      <link rel = "stylesheet" href = "css/passport.css">
+
+  <link rel = "preconnect" href = "https://fonts.googleapis.com">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com" cressorigin>
+  <link href = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Poiret+One&diplay=swap" rel="stylesheet">
+  <style>
+
+   </style>
+</head>
+
   <main>
-    <h1>Преобразование</h1>
-    <p class="to-translit">Иванова</p>
-    <p class="to-translit">Алина</p>
-    <p class="to-translit">2005</p>
-    <button id="go">Преобразовать</button>
+<h1 id = "console" class = "course-title"> Изменяем кириллицу на латиницу по клику </h1>
+<h3 id = "passport" >Паспорт</h3>
+  <div id = "main_fon"> 
+
+            <h5 id = "pass_title" class = "poiret-one-regular">РОССИЙСКАЯ ФЕДЕРАЦИЯ</h5>
+            <div id = "page_top">
+                <p class = "vidanstr1"> УМВД РОССИИ </p>
+                <p class = "vidanstr2">ПО ХМАО - ЮГРЕ</p>
+                <p class = "vidanstrdata">12.12.2012</p>
+                <p class = "vidanstrcode">123-123</p>
+                <img class = "podpis" src = "images/podpis1.png">
+                <img class = "podpis1" src = "images/podpis.png">
+            </div>
+
+            <div id = "page_bottom">
+                <img class = "passfoto" src = "images/foto.jpg">
+                <p class = "hfamilia">АНДРИЕНКО</p>
+                <p class = "hname">ПОЛИНЫ</p>
+                <p class = "hfname">АЛЕКСЕЕВНЫ</p>
+                <p class = "hpol">ЖЕН.</p>
+                <p class = "hborn">30.09.2004</p>
+                <p class = "hpborn1">Г. СУРГУТ</p>
+                <p class = "hpborn2">ТЮМЕНСКАЯ ОБЛ.</p>
+            </div> 
+        </div>
+
+           <button type = "button" class = "button"> Править </button>
+
+
+<h3 id = "console" class = "course-title"> DOM_JS. Считываем информацию из DOM </h3>
+        <img src = "images/passportconsole.jpg" height = "500px" >
+        <script src = "js/passport.js">
+document.addEventListener('DOMContentLoaded', function() {
+    
+});
+</script>
   </main>
   
 <footer class="site-footer">
