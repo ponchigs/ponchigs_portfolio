@@ -8,7 +8,7 @@
   <script src="js/nav.js" defer></script>
 </head>
 <body>
-  
+
 <header class="site-header">
   <a href="index.html" class="logo-link">
     <img src="images/logo.png" alt="Логотип" class="logo" width="160">
@@ -24,34 +24,37 @@
   </nav>
 </header>
 
-  <main>
-    <h1>Паспорт (макет)</h1>
-    <p>Фамилия: <span id="surname">Иванова</span></p>
-    <p>Имя: <span id="name">Алина</span></p>
-    <p>Год рождения: <span id="yob">2005</span></p>
+  <main class="narrow">
+    <section class="content-section">
+      <h1>Паспорт (макет)</h1>
+      <p>Фамилия: <span id="surname">Иванова</span></p>
+      <p>Имя: <span id="name">Алина</span></p>
+      <p>Год рождения: <span id="yob">2005</span></p>
 
-    <button id="readBtn">Считать из DOM</button>
-    <pre id="out">—</pre>
+      <div class="form-actions">
+        <button id="readBtn" class="btn btn-primary" type="button">Считать из DOM</button>
+      </div>
+      <pre id="out">—</pre>
+    </section>
 
-    <section>
+    <section class="content-section">
       <h2>Инструкция для DevTools</h2>
       <p>В консоли выполните пример из задания, сделайте скриншот и вставьте сюда:</p>
-      <img src="images/screenshots/devtools.png" alt="Скриншот DevTools" width="480">
+      <img src="images/screenshots/devtools.png" alt="Скриншот DevTools" class="responsive-media" width="480">
     </section>
   </main>
-  
+
 <footer class="site-footer">
   <p>© 2025 Андриенко Полина Алексеевна. Контрольная работа №1</p>
 </footer>
 
-
-  <script>
-    document.getElementById('readBtn').addEventListener('click',()=>{
-      const s = document.getElementById('surname')?.innerText || '';
-      const n = document.getElementById('name')?.innerText || '';
-      const y = document.getElementById('yob')?.innerText || '';
-      document.getElementById('out').textContent = `Фамилия: ${s}\nИмя: ${n}\nГод: ${y}`;
-    });
-  </script>
+<script>
+  document.getElementById('readBtn').addEventListener('click', () => {
+    const s = document.getElementById('surname')?.innerText || '';
+    const n = document.getElementById('name')?.innerText || '';
+    const y = document.getElementById('yob')?.innerText || '';
+    document.getElementById('out').textContent = `Фамилия: ${s}\nИмя: ${n}\nГод: ${y}`;
+  });
+</script>
 </body>
 </html>

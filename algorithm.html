@@ -24,11 +24,18 @@
   </nav>
 </header>
 
-  <main>
-    <h1>Калькулятор возраста</h1>
-    <label>Год рождения: <input type="number" id="yob" value="2005"></label>
-    <button id="calc">Рассчитать</button>
-    <pre id="res">—</pre>
+  <main class="narrow">
+    <section class="content-section">
+      <h1>Калькулятор возраста</h1>
+      <div class="form-field">
+        <label for="yob">Год рождения</label>
+        <input type="number" id="yob" value="2005" class="form-control">
+      </div>
+      <div class="form-actions">
+        <button id="calc" class="btn btn-primary" type="button">Рассчитать</button>
+      </div>
+      <pre id="res">—</pre>
+    </section>
   </main>
   
 <footer class="site-footer">
