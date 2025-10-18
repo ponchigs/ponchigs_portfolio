@@ -1,101 +1,115 @@
-*{  
-    padding: 0px;
-    margin: 0px;
+.passport-section{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
 }
 
-  .course-title {
+.passport-card{
+  position:relative;
+  padding:48px 56px 64px;
+  border-radius:28px;
+  background:url('../images/fon.png') center/cover no-repeat;
+  color:#2f1e16;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  font-family:'Inter', sans-serif;
+}
 
-    padding-top: 22px;
-    font-size: 2em;
-    font-weight: bold;
+.passport-title{
+  margin:0 0 28px;
+  text-align:center;
+  font-size:1.15rem;
+  text-transform:uppercase;
+  letter-spacing:0.6em;
+  font-weight:600;
+}
+
+.passport-top{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px 28px;
+  margin-bottom:36px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+}
+
+.passport-issued-line{
+  grid-column:1/-1;
+}
+
+.passport-issued-date{
+  grid-column:1/2;
+}
+
+.passport-issued-code{
+  grid-column:2/3;
+  text-align:right;
+}
+
+.passport-signature{
+  grid-column:1/2;
+  margin-top:12px;
+  max-width:140px;
+}
+
+.passport-signature-alt{
+  grid-column:2/3;
+  justify-self:end;
+  max-width:160px;
+  margin-top:20px;
+}
+
+.passport-bottom{
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:18px 32px;
+  align-items:start;
+  font-weight:600;
+}
+
+.passport-photo{
+  width:100%;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  grid-row:span 6;
+}
+
+.passport-bottom p{
+  margin:0;
+  font-size:1.05rem;
+  letter-spacing:0.1em;
+}
+
+.passport-surname{
+  font-size:1.4rem;
+}
+
+.passport-name,
+.passport-patronymic{
+  font-size:1.25rem;
+}
+
+.passport-birthday{
+  margin-top:12px;
+}
+
+.passport-birthplace{
+  text-transform:uppercase;
+}
+
+@media (max-width:700px){
+  .passport-card{
+    padding:36px 28px 48px;
   }
 
-#main_fon{
-    height: 734px;
-    background-image: url('../images/fon.png');
-    background-repeat: no-repeat;
-}
-#pass_title{
-    padding-top: 40px;
-    padding-left: 75px;
-}
-.poiret-one-regular {
-  font-family: "Poiret One", sans-serif;
-  font-weight: italic;
-  font-style: normal;
-  letter-spacing:  0.8em;
-  word-spacing: 0.4em;
-}
-@font-face {
-    font-family: 'Kreadon';
-    src: local('Kreadon.ttf'),
-          url (/Kreadon.ttf.ttf);
-}
-.vidanstr1{
-    font-family: 'Kreadon';
-    padding-top: 18px;
-    padding-left: 145px;
-}
-.vidanstr2{
-    font-family: 'Kreadon';
-    padding-top: 5px;
-    padding-left: 140px;
-    word-spacing: 0.65em;
-}
-.vidanstrdata{
-    font-family: 'Kreadon';
-    padding-top: 30px;
-    padding-left: 105px;
-    word-spacing: 0.65em;
-    float: left
-}
-.vidanstrcode{
-    font-family: 'Kreadon';
-    padding-top: 30px;
-    padding-left: 295px;
-    word-spacing: 0.65em;
-}
-.podpis{
-    padding-top: 30px;
-    padding-left: 55px;
-    float: left;
-}
-.podpis1{
-    padding-top: 50px;
-    padding-left: 115px;
-}
-.passfoto{
-    padding-top: 130px;
-    padding-left: 22px;
-    float:left;
-}
-.hfamilia{
-    padding-top: 95px;
-    padding-left: 280px ;
-}
-.hname{
-    padding-top: 33px;
-    padding-left: 290px;
-}
-.hfname{
-    padding-top: 3px;
-    padding-left: 280px;
-}
-.hpol{
-    padding-top: 3px;
-    padding-left: 40px;
-    float: left
-}
-.hborn{
-    padding-top: 3px;
-    padding-left: 350px;
-}
-.hpborn1{
-    padding-top: 3px;
-    padding-left: 280px;
-    word-spacing: 0.7em;
-}
-.hpborn2{
-    padding-top: 4px;
-    padding-left: 260px;
+  .passport-bottom{
+    grid-template-columns:1fr;
+  }
+
+  .passport-photo{
+    max-width:220px;
+    grid-row:auto;
+    justify-self:center;
+  }
 }
