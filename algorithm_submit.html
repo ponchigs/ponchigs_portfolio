@@ -8,7 +8,7 @@
   <script src="js/nav.js" defer></script>
 </head>
 <body>
-
+  
 <header class="site-header">
   <a href="index.html" class="logo-link">
     <img src="images/logo.png" alt="Логотип" class="logo" width="160">
@@ -24,40 +24,29 @@
   </nav>
 </header>
 
-  <main class="narrow">
-    <section class="content-section">
-      <h1>Отправка результата алгоритма</h1>
-      <form action="https://httpbin.org/post" method="post" id="algoForm" class="form-card">
-        <div class="form-field">
-          <label for="task_condition">Условие (кратко)</label>
-          <textarea name="task_condition" id="task_condition" rows="3" class="form-control">Рассчитать возраст по году рождения и определить статус.</textarea>
-        </div>
-        <div class="form-field">
-          <label for="input_data">Входные данные</label>
-          <input type="text" name="input_data" id="input_data" class="form-control" value="">
-        </div>
-        <div class="form-field">
-          <label for="result_value">Результат</label>
-          <input type="text" name="result_value" id="result_value" class="form-control" value="">
-        </div>
-        <input type="hidden" name="student_id" value="STUDENT_XXX">
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Отправить</button>
-        </div>
-      </form>
-      <p><small>Подсказка: сначала заполните данные на странице «Решение алгоритмической задачи», затем вернитесь сюда — поля заполнятся автоматически.</small></p>
-    </section>
+  <main>
+    <h1>Отправка результата алгоритма</h1>
+    <form action="https://httpbin.org/post" method="post" id="algoForm">
+      <label>Условие (кратко):<br>
+        <textarea name="task_condition" rows="3">Рассчитать возраст по году рождения и определить статус.</textarea>
+      </label><br>
+      <label>Входные данные: <input type="text" name="input_data" id="input_data" value=""></label><br>
+      <label>Результат: <input type="text" name="result_value" id="result_value" value=""></label><br>
+      <input type="hidden" name="student_id" value="STUDENT_XXX">
+      <button type="submit">Отправить</button>
+    </form>
+    <p><small>Подсказка: сначала заполните данные на странице «Решение алгоритмической задачи», затем вернитесь сюда — поля заполнятся автоматически.</small></p>
   </main>
-
+  
 <footer class="site-footer">
   <p>© 2025 Андриенко Полина Алексеевна. Контрольная работа №1</p>
 </footer>
 
-<script>
-  const input = localStorage.getItem('algo_input') || '';
-  const result = localStorage.getItem('algo_result') || '';
-  if (input) document.getElementById('input_data').value = input;
-  if (result) document.getElementById('result_value').value = result;
-</script>
+  <script>
+    const input = localStorage.getItem('algo_input') || '';
+    const result = localStorage.getItem('algo_result') || '';
+    if(input) document.getElementById('input_data').value = input;
+    if(result) document.getElementById('result_value').value = result;
+  </script>
 </body>
 </html>
